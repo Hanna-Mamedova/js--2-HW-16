@@ -161,27 +161,27 @@ console.log(weekFn('2')); // null
  */
 
 function ageClassification(n) {
-    return n > 122 ? 'null' : n > 90 ? 'долгожители' : n > 75 ? 'старческий возраст' : n > 65 ? 'пожилой возраст' : n > 44 ? 'средний возраст' : n > 24 ? 'молодой человек' : n > 0 ? "детский возраст" : null;
+     return n > 122 ? null : n > 90 ? 'долгожители' : n > 75 ? 'старческий возраст' : n > 65 ? 'пожилой возраст' : n > 44 ? 'средний возраст' : n > 24 ? 'молодой возраст' : n > 0 ? "детский возраст" : null;
 
 }
 
-console.log('-1 :', ageClassification(-1)); // -1 : null
 
-console.log('5 :', ageClassification(5)); // 5 : детский возраст
 
-console.log('34 :', ageClassification(34)); // 34 : молодой возраст
+// console.log('5 :', ageClassification(5)); // 5 : детский возраст
 
-console.log('50 :', ageClassification(50)); // 50 : средний возраст
+// console.log('34 :', ageClassification(34)); // 34 : молодой возраст
 
-console.log('65.1 :', ageClassification(65.1)); // 65.1 : пожилой возраст
+// console.log('50 :', ageClassification(50)); // 50 : средний возраст
 
-console.log('80 :', ageClassification(80)); // 80 : старческий возраст
+// console.log('65.1 :', ageClassification(65.1)); // 65.1 : пожилой возраст
 
-console.log('110 :', ageClassification(110)); // 110 : долгожители
+// console.log('80 :', ageClassification(80)); // 80 : старческий возраст
 
-console.log('130 :', ageClassification(130)); // 130 : null
+// console.log('110 :', ageClassification(110)); // 110 : долгожители
 
-console.log('75 :', ageClassification(75)); 
+// console.log('130 :', ageClassification(130)); // 130 : null
+
+// console.log('75 :', ageClassification(75)); 
 
 
 /*
@@ -222,21 +222,24 @@ console.log('75 :', ageClassification(75));
 
 
 function oddFn(n) {
-     var i = 1;
-     var arr = [];
+    var i = 0;
+    var arr = [];
 
-     while (i < n) {
-        !(i % 2 == 0) ? arr.push(i) : null;
-        i++;
-     }
-    return arr;
- }
+    while (i++ < n) {
+       !(i % 2 == 0) ? arr.push(i) : null;
+    }
+   return arr;
+}
+
+  console.log(typeof arr);
 
 console.log(oddFn(10)); // [1, 3, 5, 7, 9]
 
 console.log(oddFn(15)); // [1, 3, 5, 7, 9, 11, 13, 15]
 
 console.log(oddFn(20)); // [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+
+console.log(oddFn(30));
 
 /*
  * #8
@@ -246,7 +249,7 @@ console.log(oddFn(20)); // [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
  * b - число
  * func –  обрабатывающая параметры a и b, возвратная (callback) функция
  *
- * ??? Реализуйте проверку: если третьим параметром передается не функция, нужно вернуть false.
+ * Реализуйте проверку: если третьим параметром передается не функция, нужно вернуть false.
  *
  */
 
